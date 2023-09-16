@@ -1,3 +1,18 @@
+fun main() {
+    
+    val universe = mutableSetOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val subsets = listOf(
+        setOf(1, 2, 3, 4, 5),
+        setOf(4, 5, 6, 7),
+        setOf(8, 9, 10),
+        setOf(2, 5, 7)
+    )
+
+    val solution = getCoveringByGreedy(universe, subsets)
+
+    println("Selected subsets indices: $solution")
+
+}
 
 fun getCoveringByGreedy(universe: MutableSet<Int>, subsets: List<Set<Int>>): List<Int>? {
     val solution: MutableList<Int> = ArrayList()
